@@ -14,16 +14,26 @@ composer dump-autoload
 # Use
 ## Prerequisite
 
-Please make sure that following command does not give any error.
+Please make sure that you have PHP v7.x installed and running. Run following command in your terminal.
 ```
 php --version
 ```
 
 `NOTE: If above command gives any error, then please install PHP and make sure that it is available to use through command line.`
 
+<br>
+
 ## Test Run
 ```
 php generate-dates ./exportData.csv
+```
+
+<br>
+
+## View Output
+To view the data generated in `./exportData.csv` file, you can open the file in any text editor. To view file contents on command line, use following command :
+```
+cat ./exportData.csv
 ```
 
 <br>
