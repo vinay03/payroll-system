@@ -38,7 +38,28 @@ cat ./exportData.csv
 
 <br>
 
-# PHPUnit Tests
+# Testing
+## Test for Failure
+
+1. If the `filename` is not specified as an command line argument :
+```
+// Command
+php generate-dates
+
+// Output
+ERROR: File name not specified.
+```
+
+2. If the `filename` specified as an command line argument is not a valid path :
+```
+// Command
+php generate-dates ./invalid/path/to/invalid/file.csv
+
+// Output
+ERROR: Failed to create output file.
+```
+
+## PHPUnit Tests
 Run following command to execute tests written using `PHPUnit`.
 
 	./vendor/bin/phpunit --bootstrap ./vendor/autoload.php --testdox tests
