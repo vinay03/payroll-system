@@ -1,0 +1,15 @@
+<?php
+namespace App;
+
+require 'vendor/autoload.php';
+include('./ConsoleController.php');
+include('./CsvHandler.php');
+include('./MonthModel.php');
+
+const MONTH_FORMAT = 'F Y';
+const SALARY_DATE_FORMAT = 'd/m/Y';
+const BONUS_DATE_FORMAT = 'd/m/Y';
+
+\App\Controllers\ConsoleController::run();
+
+?>

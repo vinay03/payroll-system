@@ -1,0 +1,9 @@
+{
+    "name": "vinay/eastern-enterprise-assignment",
+    "description": "Assignment #1",
+    "type": "project",
+    "require": {
+        "nesbot/carbon": "^2.25",
+        "league/csv": "^9.4"
+    }
+}
