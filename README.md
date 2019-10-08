@@ -38,6 +38,15 @@ cat ./exportData.csv
 
 <br>
 
+# PHPUnit Tests
+Run following command to execute tests written using `PHPUnit`.
+
+	./vendor/bin/phpunit --bootstrap ./vendor/autoload.php --testdox tests
+
+Above command will test uitility by simulating date & time to a specific time in past and cross check if the utility generates a valid output.
+
+<br>
+
 # Exit Codes
 
 This command line utility emits exit codes which makes it more useful.
@@ -74,20 +83,20 @@ This command line utility emits exit codes which makes it more useful.
 <br>
 
 # Developer Tweaks
-1. To change format of the values displayed in `Month` column, please edit following code in `generate-dates` file
+1. To change format of the values displayed in `Month` column, please edit following code in `Config.php` file
 ```
 const MONTH_FORMAT = 'F Y';
 ```
 
 <br>
 
-2. To change format of the values displayed in `Salary Payment Date` column, edit following code in `generate-dates` file
+2. To change format of the values displayed in `Salary Payment Date` column, edit following code in `Config.php` file
 ```
 const SALARY_DATE_FORMAT = 'd/m/Y';
 ```
 <br>
 
-3. To change format of the values displayed in `Bonus Payment Date` column, edit following code in `generate-dates` file
+3. To change format of the values displayed in `Bonus Payment Date` column, edit following code in `Config.php` file
 ```
 const BONUS_DATE_FORMAT = 'd/m/Y';
 ```

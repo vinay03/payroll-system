@@ -5,11 +5,9 @@ require 'vendor/autoload.php';
 include('./ConsoleController.php');
 include('./CsvHandler.php');
 include('./MonthModel.php');
+include('./Config.php');
 
-const MONTH_FORMAT = 'F Y';
-const SALARY_DATE_FORMAT = 'd/m/Y';
-const BONUS_DATE_FORMAT = 'd/m/Y';
-
-\App\Controllers\ConsoleController::run();
+$filename = isset($argv[1]) ? $argv[1] : false;
+\App\Controllers\ConsoleController::run($filename);
 
 ?>

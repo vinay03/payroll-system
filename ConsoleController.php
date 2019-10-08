@@ -6,10 +6,8 @@ use Carbon\Carbon;
 
 class ConsoleController
 {
-	public static function run()
+	public static function run($filename)
 	{
-		global $argv;
-		$filename = isset($argv[1]) ? $argv[1] : false;
 		$handler = App\Handlers\CsvHandler::_($filename);
 		$handler->init();
 		$handler->addHeader();
@@ -24,9 +22,6 @@ class ConsoleController
 			}
 			$loopDate->addMonth();
 		} while ($now->format('Y') == $loopDate->format('Y'));
-
-		echo "DONE\n";
-		exit(0);
 	}
 }
 
